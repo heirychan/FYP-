@@ -1,0 +1,131 @@
+<!-- extend base layout -->
+{% extends "index_base.html" %}
+{% block head_css %}
+        {{ super() }}
+        <link href="{{url_for('static',filename='css/custom.css')}}" rel="stylesheet">
+{% endblock %}
+{% block content %}
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+       <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+       <li data-target="#carousel-example-generic" data-slide-to="1" ></li>
+       <li data-target="#carousel-example-generic" data-slide-to="2" ></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3" ></li>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <div class="jumbotron" style="background: url('static/image/slide1.jpg');background-size: 100% 100%;background-repeat: no-repeat;">
+            <div class="container">
+            <h1><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/271/gear_2699-fe0f.png" alt="FM Intranet" width="120" height="120"></i>FM Intranet</h1>
+            <p>{{_("Easy to management access datacenter system")}}</p>
+            <center>
+            <p><a class="btn btn-primary btn-lg" href="/login/"
+                 role="button">{{_("Login")}} </a></p>
+            </center>
+            </div>
+           </div>
+        </div>
+
+        <div class="item">
+            <div class="jumbotron" style="background: url('static/image/slide2.jpg');background-size: 100% 100%;background-repeat: no-repeat;">
+            <div class="container">
+            <h1><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/271/file-folder_1f4c1.png" alt="Record" width="120" height="120"><p style="color:red">Must-read !</p>{{_("Stay Record")}}</h1>
+                <p>{{_("Understand datacenter real-time information")}}</p>
+            <center>
+                <p><a class="btn btn-primary btn-lg" href="/stay" role="button">{{_("Get Stay Record")}} &raquo;</a></p>
+            </center>
+            </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="jumbotron" style="background: url('static/image/slide3.jpg');background-size: 100% 100%;background-repeat: no-repeat;">
+            <div class="container">
+            <h1><img src="https://icons-for-free.com/iconfiles/png/512/g+google+google+2015+new+google+icon-1320190551260288871.png" alt="GID Details" width="120" height="120">{{_("GID Details")}}</h1>
+            <p>{{_("Getting customers details")}}</p>
+            <center>
+            <p><a class="btn btn-primary btn-lg" href="/gid" role="button">{{_("Get Customers detail")}} &raquo;</a></p>
+            </center>
+            </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="jumbotron" style="background: url('static/image/slide4.jpg');background-size: 100% 100%;background-repeat: no-repeat;">
+            <div class="container">
+            <h1><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/271/calendar_1f4c5.png" alt="Today Guest List" width="120" height="120"><p style="color:red">Must-read !</p>{{_("Today Guest List")}}</h1>
+            <p>{{_("Know today customers access details")}}</p>
+            <center>
+            <p><a class="btn btn-primary btn-lg"  href="/guest" role="button">{{_("Get Today Guest List")}} &raquo;</a></p>
+            </center>
+            </div>
+            </div>
+        </div>
+</div>
+
+    <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+
+</div>
+
+    <div class="row">
+        <div class="col-md-7 col-md-offset-1 col-xs-offset-1">
+            <marquee direction="right" height="60" scrollamount="5" behavior="alternate"><h1><font color=#fc95df>All staff please remember to do everyday !</font></h1></marquee>
+                    <h2 class="featurette-heading">{{_("FM Intranet System")}}</h2>
+                    <li class="lead tight">{{_("Add Visit Record")}}</li>
+                    <li class="lead tight">{{_("Search Authorized Person")}}</li>
+                    <li class="lead tight">{{_("Search By Company & Date")}}</li>
+                </ul>
+        </div>
+        <div class="col-md-3 col-xs-3 col-md-offset-1 col-xs-offset-1">
+              <h1><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/271/gear_2699-fe0f.png" alt="FM Intranet" width="120" height="120"></h1>
+        </div>
+    </div>
+<br>
+<br>
+    <div class="row">
+        <div class="col-md-3 col-md-offset-1 col-xs-offset-1 ">
+            <h1><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/271/file-folder_1f4c1.png" alt="Stay Record" width="120" height="120"></h1>
+        </div>
+        <div class="col-md-7 col-md-offset-1 col-xs-offset-1">
+            <h2 class="featurette-heading">{{_("Stay Record")}}</h2>
+                <ul>
+                    <li class="lead tight">{{_("Easy to know customers access datacenter information")}}</li>
+                </ul>
+        </div>
+    </div>
+<br>
+<br>
+    <div class="row featurette">
+        <div class="col-md-7 col-md-offset-1 col-xs-offset-1">
+          <h2 class="featurette-heading">{{_("GID Details")}}</h2>
+            <ul>
+                <li class="lead tight">{{_("Easy to management customers details")}}</li>
+                <li class="lead tight">{{_("Help the customers remote open computer door")}}</li>
+            </ul>
+        </div>
+        <div class="col-md-3 col-xs-3 col-md-offset-1 col-xs-offset-1">
+          <h1><img src="https://icons-for-free.com/iconfiles/png/512/g+google+google+2015+new+google+icon-1320190551260288871.png" alt="GID Details" width="120" height="120"></h1>
+        </div>
+    </div>
+<br>
+<br>
+    <div class="row">
+        <div class="col-md-3 col-md-offset-1 col-xs-offset-1">
+           <h1><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/271/calendar_1f4c5.png" alt="Today Guest List" width="120" height="120"></h1>
+        </div>
+          <div class="col-md-7 col-md-offset-1 col-xs-offset-1">
+            <h2 class="featurette-heading">{{_("Today Guest List")}}</h2>
+                <ul>
+                    <li class="lead tight">{{_("Easy to know today access customers information")}}</li>
+                </ul>
+        </div>
+    </div>
+{% endblock %}

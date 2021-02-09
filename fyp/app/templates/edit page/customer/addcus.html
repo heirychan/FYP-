@@ -1,0 +1,61 @@
+{% extends "index_base.html" %}
+{% block content %}
+
+<html>
+ 
+<body><center>
+    
+    <tr>
+      <td align=center valign="center"><table border=0 cellspacing=1 cellpadding=0><tr>
+          <td class=button1><a href="cusadd"> &nbsp;  Add Contact &nbsp;</a></td>
+        <td width=10>&nbsp;</td>
+        <td class=button1><a href="cusall"> &nbsp; View All Information &nbsp;</a></td>
+        <td width=10>&nbsp;</td>
+        <td class=button1><a href="cussch"> &nbsp; Search Contact By Customer &nbsp; </a></td>
+        </tr></table>
+      </td>
+    </tr>
+    
+    <p></p><p></p>
+    
+    <label for="company">Customer:</label>
+    <input id="text_a" type="text" />
+    
+    <p></p>
+    
+    <label for="name">Customer Name:</label>
+    <input id="text_b" type="text" />
+    
+    <p></p>
+    
+    <label for="HKID">HKID:</label>
+    <input id="text_c" type="text" maxlength="4" />
+    <p id="answer"></p>
+    
+    <p></p>
+    
+    <label for="Phone No">Phone No.:</label>
+    <input id="text_d" type="text" maxlength="8" />
+    <p id="answer"></p>
+    
+    <p></p>
+    
+    <label for="email">Email:</label>
+    <input id="text_e" type="text" />
+    
+    <p></p>
+    
+    <label for="remark">Remark:</label>
+    <input id="text_f" type="text" />
+    
+    <p></p>
+    
+    
+    <button onclick="myFunction()"  style="width:120px;height:40px;border:3px #ff91ca double;">Submit</button>
+    
+</center><body>
+    
+</body>
+</html>
+
+{% endblock %}

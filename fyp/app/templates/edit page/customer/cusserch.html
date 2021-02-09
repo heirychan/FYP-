@@ -1,0 +1,44 @@
+{% extends "index_base.html" %}
+{% block content %}
+
+<html>
+ 
+<body><center>
+    
+    <tr>
+      <td align=center valign="center"><table border=0 cellspacing=1 cellpadding=0><tr>
+          <td class=button1><a href="cusadd"> &nbsp;  Add Contact &nbsp;</a></td>
+        <td width=10>&nbsp;</td>
+        <td class=button1><a href="cusall"> &nbsp; View All Information &nbsp;</a></td>
+        <td width=10>&nbsp;</td>
+        <td class=button1><a href="cussch"> &nbsp; Search Contact By Customer &nbsp; </a></td>
+        </tr></table>
+      </td>
+    </tr>
+    <p></p><p></p>
+
+<label for="company">Search Company like :</label>
+<input id="text_a" type="text" />
+
+<p></p>
+    
+<label for="name">Search name like :</label>
+<input id="text_b" type="text" />
+
+<p></p>
+
+<label for="ID">Search ID like :</label>
+<input id="text_v" type="text" maxlength="4" />
+<p id="answer"></p>
+
+<p></p>
+
+<button onclick="myFunction()">Check</button>
+
+
+</center><body>
+    
+</body>
+</html>
+
+{% endblock %}

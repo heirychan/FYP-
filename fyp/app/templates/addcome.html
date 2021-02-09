@@ -1,0 +1,86 @@
+{% extends "index_base.html" %}
+{% block content %}
+
+<html>
+<br>
+<center>
+<form id="addcome" method=post action="visit" onSubmit="return editComputer(this);">
+<table border=0 cellspacing=0 cellpadding=4>
+<tr><td colspan=3 class=text4 align=center><b>
+    Add here temporary visit Information
+    </b></td></tr>
+
+<tr><td class=text3 valign=top><b>IDC:</b></td>
+    <td class=text3 align=left valign=top>
+      <select name=place class=elem1>
+            <option value=TKO>TKO</option>
+            <option value=TKO>TY</option>
+      </select>
+
+
+    </td>
+</tr>
+<tr><td class=text3><b>Name:</b></td>
+    <td class=text3 align=left><input type=text class=elem2 name=name value="" size=30 maxlength=30></td>
+</tr>
+<tr><td class=text3><b>staff/HK ID:</b></td>
+    <td class=text3 align=left>
+    <input type=text class=elem2 name=hkid value="" size=4 maxlength=4></td>
+</tr>
+<tr><td class=text3><b>Company:</b></td>
+    <td class=text3 align=left>
+      <input type=text class=elem2 name=hkid value="" size=80 maxlength=100></td>
+</tr>
+<tr><td class=text3><b>Card:</b></td>
+    <td class=text3 align=left>
+     <input type=text class=elem2 name=card value="" size=4 maxlength=4></td>
+</tr>
+<tr><td class=text3><b>Time In:</b></td>
+    <td class=text3 align=left>
+     <input type=date class=elem2 name=time_in value="" size=14 maxlength=14></td>
+</tr>
+<tr><td class=text3><b>Time Out:</b></td>
+    <td class=text3 align=left>
+     <input type=date class=elem2 name=time_out value="" size=14 maxlength=14></td>
+</tr>
+
+
+<tr><td colspan=3 class=text3 align=center>
+      <select name=cmd class=elem1>
+        <option value=insert>Add a New Visit Record</option>
+        
+      </select>&nbsp;
+      <input type=submit onclick="myFunction()" name=submit class=button2 value="Submit">
+      </td></tr>
+</table>
+</form>
+
+
+
+
+
+</center>
+
+
+
+
+
+
+<script>
+function myFunction() {
+  document.getElementById("addcome").submit();
+}
+</script>
+
+
+
+
+
+
+
+
+</body>
+
+
+
+{% endblock %}
