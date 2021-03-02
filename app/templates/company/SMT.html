@@ -1,0 +1,124 @@
+{% extends "index_base.html" %}
+{% block content %}
+<html>
+<head>
+
+
+
+</head>
+<body bgcolor=white>
+
+<!-- Top Table: Logo, title and buttons -->
+<table border=0 width=100% cellspacing=0 cellpadding=0>
+<tr>
+  <td class=title1 align=center><b>Customer Detail Information</b></td>
+</tr>
+<tr>
+  <td align=center valign=middle><table border=0 cellspacing=1 cellpadding=0><tr>
+     <a href="gid">Search Customer Detail</a></td>
+    </tr></table>
+  </td>
+</tr>
+</table>
+<!-- End Top Table -->
+<br>
+<center>
+<table border=1 cellspacing=0 cellpadding=4 width=80%>
+<tr align=center><td class=text4 colspan=5><b>Customer Information</b></td></tr>
+<tr align=left>
+  <tr><td class=title4 align=left width=40%><b>Customers</b></td>
+      <td class=title4 align=left width=10%><b>GID</b></td>
+      <td class=title4 align=left width=10%><b>Status</b></td>
+      <td class=title4 align=left width=10%><b>Start Date</b></td>
+      <td class=title4 align=left width=10%><b>End Date</b></td>
+  </tr>
+  <tr valign=top><td class=text3><b>SMT Network</b></td>
+      <td class=text3>SMT01</td>
+      <td class=text3>Active</td>
+      <td class=text3>2015-07-14</td>
+      <td class=text3>0000-00-00</td>
+  </tr>
+<tr>
+  <td class=title4 align=left colspan=5><b><font color=red>
+
+<br>
+</font></b></td>
+</tr>
+</table>
+<br><table border=1 cellspacing=0 cellpadding=4 width=80%>
+<tr align=center><td class=text4 colspan=6><b>Contact Information</b></td></tr>
+<tr align=left>
+  <td class=title4 width=40%><b>Customers</b></td>
+  <td class=title4 width=15%><b>Contact</b></td>
+  <td class=title4 width=10%><b>HKID</b></td>
+  <td class=title4 width=10%><b>Phone No.</b></td>
+  <td class=title4 width=5%><b>Remark</b></td>
+</tr>
+<tr align=left>
+  <td class=text4><b>SMT Network</b></td>
+  <td class=text4 align=left>Aekerley</td>
+  <td class=text4 align=left>Y8934</td>
+  <td class=text4 align=left>21106668</td>
+  <td class=text4 align=center>-</td>
+</tr>
+<tr align=left>
+  <td class=text_remark><b>SMT Network</b></td>
+  <td class=text_remark align=left>Mickey</td>
+  <td class=text_remark align=left>Y8416</td>
+  <td class=text_remark align=left>2110 6690 / 6177 0929</td>
+  <td class=text_remark align=center>-</td>
+</tr>
+
+</table>
+<br><table border=1 cellspacing=0 cellpadding=4 width=80%>
+<tr align=center><td class=text4 colspan=7><b>Rack Information</b></td></tr>
+<tr align=left>
+  <td class=title4 width=40%><b>Customers</b></td>
+  <td class=title4 width=5% align=center><b>Location</b></td>
+  <td class=title4 width=5% align=center><b>Units</b></td>
+  <td class=title4 width=10% align=center><b>Status</b></td>
+  <td class=title4 width=5% align=center><b>KVA</b></td>
+  <td class=title4 width=10% align=center><b>Move-in Date</b></td>
+  <td class=title4 width=5% align=center><b>Remark</b></td>
+</tr>
+<tr align=left>
+  <td class=text4><b>SMT Network</b></td>
+  <td class=text4 align=center>GG-14</td>
+  <td class=text4 align=center>Full</td>
+  <td class=text4 align=center>Used</td>
+  <td class=text4 align=center>2</td>
+  <td class=text4 align=center>2014-07-15</td>
+  <td class=text4 align=center>-</td>
+</tr>
+<tr align=left>
+  <td class=text3><b>SMT Network</b></td>
+  <td class=text3 align=center>GG-15</td>
+  <td class=text3 align=center>Full</td>
+  <td class=text3 align=center>Used</td>
+  <td class=text3 align=center>2</td>
+  <td class=text3 align=center>2018-02-18</td>
+  <td class=text3 align=center>-</td>
+</tr>
+<tr><td class=text3 colspan=7 align=right><b><u>Total </u> : 2 Rack(s)</b></td>
+</tr>
+</table>
+
+<br><table border=1 cellspacing=0 cellpadding=4 width=80%>
+<tr align=center><td class=text4 colspan=3><b>Switch Port Information</b></td></tr>
+<tr align=left>
+  <td class=title4 width=40%><b>Customers</b></td>
+  <td class=title4 width=40%><b>Switch Port</b></td>
+</tr>
+<tr align=left>
+  <td class=text4><b>SMT Network</b></td>
+  <td class=text3 align=center>GigabitEthernet 0/0 - 20</td>
+  </tr>
+  <td class=text4><b>SMT Network</b></td>
+  <td class=text3 align=center>GigabitEthernet 1/1 - 20</td>
+<br>
+</tr>
+</table>
+</center>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends "index_base.html" %}
+
+
+{% block content %}
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body bgcolor=white>
+
+<!-- Top Table: Logo, title and buttons -->
+<table border=0 width=100% cellspacing=0 cellpadding=0>
+<tr>
+  <td class=title1 align=center><b>Customer Detail Information</b></td>
+</tr>
+<tr>
+  <td align=center valign=middle><table border=0 cellspacing=1 cellpadding=0><tr>
+    <td class=button1><a href="/idc/customers_detail.php"> &nbsp; Search Customer Detail &nbsp; </a></td>
+    </tr></table>
+  </td>
+</tr>
+</table>
+<!-- End Top Table -->
+<br>
+<center>
+<form method=post action="/idc/customers_detail.php">
+<p class=text1>Select one of the customers to show detail information<br>
+</p>
+<table border=0 cellspacing=0 cellpadding=4>
+<tr><td colspan=2 class=text4 align=center><b>Get Customer Detail Information<br><br></b></td></tr>
+
+<tr><td class=text3><b>Search by Customers</b></td>
+    <td class=text3 align=center>
+      <select name=showdept class=elem1>
+        <option value="">--Make a choice--</option>
+        <option value="aaa">aa有限公司</option>
+        <option value="bbb">bb有限公司</option>
+        <option value="ccc">cc有限公司</option>
+      </select>
+      <p></p>
+      <script>
+
+ </script>
+      
+    </td></tr>
+<tr><td class=text3 align=center colspan=2>
+      <input type=reset class=button2 value="Clear">
+      <input type=submit name=show class=button2 value="Search!">
+      
+
+    </td></tr>
+</table>
+</form>
+</center>
+</body>
+</html>
+
+{% endblock %}

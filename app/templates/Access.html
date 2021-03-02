@@ -1,0 +1,58 @@
+{% extends "index_base.html" %}
+{% block content %}
+
+<center>
+
+
+<label for="name">Search name like :</label>
+<input id="text_a" type="text" />
+
+<p></p>
+
+<label for="ID">Search ID like :</label>
+<input id="text_b" type="text" maxlength="4" />
+<p id="answer"></p>
+
+<p></p>
+
+<button onclick="myFunction()">Check</button>
+
+
+<script>
+function myFunction()
+{
+  var a=document.getElementById("text_a").value;
+  var b=document.getElementById("text_b").value;
+
+  if (a=="Alex")
+    {
+      document.getElementById("answer").innerText=alert("He is on the access list");
+    }
+  else if (a=="Heiry")
+    {
+      document.getElementById("answer").innerText=alert("He is on the access list");
+    }
+  else if (b=="1111")
+    {
+      document.getElementById("answer").innerText=alert("He is on the access list");
+    }
+  else if (b=="2222")
+    {
+      document.getElementById("answer").innerText=alert("He is on the access list");
+    }
+  else
+    {
+      document.getElementById("answer").innerText=alert("Who Are U?");
+    }
+
+  
+}
+
+
+</script>
+<p></p><p></p><p></p><p></p>
+
+
+
+</center>
+ {% endblock %}

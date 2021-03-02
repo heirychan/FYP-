@@ -1,0 +1,100 @@
+{% extends "index_base.html" %}
+
+
+{% block content %}
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body bgcolor=white>
+
+<!-- Top Table: Logo, title and buttons -->
+
+<!-- End Top Table -->
+<br>
+<center>
+<form method=post action="/idc/visit.php" onSubmit="return editComputer(this);">
+<table border=0 cellspacing=0 cellpadding=4>
+<tr><td colspan=3 class=text4 align=center><b>
+    Add Visit Information
+    </b></td></tr>
+<tr><td class=text3><b>Record ID:</b></td>
+    <td class=text3 align=left>?</td>
+</tr>
+<tr><td class=text3 valign=top><b>IDC:</b></td>
+    <td class=text3 align=left valign=top>
+      <select name=place class=elem1>
+            <option value=CTT>TKO</option>
+            <option value=ALC>TY</option>
+      </select>
+
+
+    </td>
+</tr>
+<tr><td class=text3><b>Name:</b></td>
+    <td class=text3 align=left><input type=text class=elem2 name=name value="" size=30 maxlength=30></td>
+</tr>
+<tr><td class=text3><b>HKID:</b></td>
+    <td class=text3 align=left>
+    <input type=text class=elem2 name=hkid value="" size=4 maxlength=4></td>
+</tr>
+<tr><td class=text3><b>FM Company:</b></td>
+    <td class=text3 align=left>
+      <select name=company class=elem1>
+        <option value=""></option>
+            <option value="920">aa有限公司</option>
+            <option value="937">bb有限公司</option>
+            <option value="844">cc有限公司</option>
+      </select>
+    </td>
+</tr>
+<tr><td class=text3><b>Visitor's Co:</b></td>
+    <td class=text3 align=left><input type=text class=elem2 name=company2 value="" size=80 maxlength=80></td>
+</tr>
+<tr><td class=text3><b>Purpose:</b></td>
+    <td class=text3 align=left>
+     <input type=text class=elem2 name=purpose value="Maintenance" size=80 maxlength=80></td>
+</tr>
+<tr><td class=text3><b>Card:</b></td>
+    <td class=text3 align=left>
+     <input type=text class=elem2 name=card value="N/A" size=4 maxlength=4></td>
+</tr>
+<tr><td class=text3><b>Tools:</b></td>
+    <td class=text3 align=left>
+     <input type=text class=elem2 name=tools value="N/A" size=80 maxlength=80></td>
+</tr>
+<tr><td class=text3><b>Time In:</b></td>
+    <td class=text3 align=left>
+     <input type=date class=elem2 name=time_in value="20201116142325" size=14 maxlength=14></td>
+</tr>
+<tr><td class=text3><b>Time Out:</b></td>
+    <td class=text3 align=left>
+     <input type=date class=elem2 name=time_out value="yyyymmddhhmmss" size=14 maxlength=14></td>
+</tr>
+
+<tr><td class=text3><b>Last Modified:</b></td>
+    <td class=text3 align=left>?</td>
+</tr>
+<tr><td colspan=3 class=text3 align=center>
+      <select name=cmd class=elem1>
+        <option value=insert>Add a New Visit Record</option>
+        <option value=update>Change Current Visit Information</option>
+        <option value=delete>Delete Current Visit Information</option>
+      </select>&nbsp;
+      <input type=submit name=submit class=button2 value="Submit">
+      </td></tr>
+</table>
+</form>
+
+
+
+
+
+</center>
+</body>
+</html>
+
+
+{% endblock %}

@@ -1,0 +1,105 @@
+{% extends "index_base.html" %}
+{% block content %}
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#bar {
+  background-image: url('https://www.w3schools.com/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 50%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#list li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#list li a:hover:not(.header) {
+  background-color: #f2ef91;
+}
+</style>
+</head>
+<body>
+<table border=0 width=100% cellspacing=0 cellpadding=0>
+<tr>
+  <td class=title1 align=center><b>Customer Detail Information</b></td>
+</tr>
+<tr>
+  <td align=center valign=middle><table border=0 cellspacing=1 cellpadding=0><tr>
+    <td class=button1><a href="/gid"> &nbsp; Search Customer Detail &nbsp; </a></td>
+    </tr></table>
+  </td>
+</tr>
+</table>
+
+<br>
+<center>
+<form method=post action="gid">
+<p class=text1>Type in of the customers company name to show detail information<br>
+</p>
+
+<h2>Customer Detail Information</h2>
+
+<input type="text" id="bar" onkeyup="Search()" placeholder="Search for Customer company name." title="Type in a company name">
+
+<ul id="list">
+  <li><a href="pccw">PCCW Network</a></li>
+  <p></p>
+  <li><a href="hkbn">HKBN Network</a></li>
+  <p></p>
+  <li><a href="hcg">HCG Network</a></li>
+  <p></p>
+  <li><a href="smt">SMT Network</a></li>
+  <p></p>
+  <li><a href="cpc">CPC Network</a></li>
+  <p></p>
+  <li><a href="cmhk">CMHK Network</a></li>
+  <p></p>
+  <li><a href="aws">Amazon Web Services (AWS)</a></li>
+</ul>
+
+<script>
+function Search() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("bar");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("list");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+</body>
+</html>
+
+{% endblock %}
