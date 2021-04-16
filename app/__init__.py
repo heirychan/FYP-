@@ -7,7 +7,22 @@ from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
+""" db """
+import mysql.connector
 
+mydb = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="123",
+    database="fyp"
+)
+  
+mycursor = mydb.cursor()
+  
+mycursor.execute("show tables;")
+  
+myresult = mycursor.fetchall()
+  
 
 """
  Logging configuration

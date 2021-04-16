@@ -2,58 +2,37 @@
 {% block content %}
 
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-</head>
-<body bgcolor=white>
-<!-- Top Table: Logo, title and buttons -->
-
-<!-- End Top Table -->
-<br>
-<center>
-<p class=text1><b>Click <u>OUT</u> to mark a time of specific visit record.</b></p><table border=1 cellspacing=0 cellpadding=4 width=95%>
-<tr align=center><td class=text4 colspan=9><b>Visit Information</b></td></tr>
-<tr align=left>
-  <td class=title4 width=5%><b>IDC</b></td>
-  <td class=title4 width=25%><b>FM Company **Visitor's Co**</b></td>
-  <td class=title4 width=10%><b>Name</b></td>
-  <td class=title4 width=10%><b>HKID</b></td>
-  <td class=title4 width=5%><b>Card</b></td>
-  <td class=title4 width=10%><b>Tools</b></td>
-  <td class=title4 width=10%><b>Time In</b></td>
-  <td class=title4 width=10%><b>Time Out</b></td>
-  <td class=title4 width=10% align=center><b>Edit/View</b></td>
-</tr>
-<tr align=left>
-  <td class=text4 align=left>HKT</td>
-  <td class=text4 align=left>aa有限公司</td>
-  <td class=text4 align=left>A.A</td>
-  <td class=text4 align=left>A111</td>
-  <td class=text4 align=left>A01</td>
-  <td class=text4 align=left>N/A</td>
-  <td class=text4 align=left>2020-11-03 09:59</td>
-  <td class=text4 align=left>2020-11-04 00:16</td>
-  <td class=text4 align=center><b><a href="/idc/visit.php?submit=1&getid=101548" OnMouseOver="window.status='Display visit_info ATS Information Technology HK Ltd'; return true" OnMouseOut="window.status='Done'; return true">Edit</a></b>&nbsp;/&nbsp;<a href="/idc/visit.php?show=1&showid=101548" OnMouseOver="window.status='Display visit_info ATS Information Technology HK Ltd'; return true" OnMouseOut="window.status='Done'; return true"><b>View</b></a></td>
-</tr>
-<tr align=left>
-  <td class=text3 align=left>HKT</td>
-  <td class=text3 align=left>bb有限公司</td>
-  <td class=text3 align=left>B.B</td>
-  <td class=text3 align=left>B111</td>
-  <td class=text3 align=left>B01</td>
-  <td class=text3 align=left>N/A</td>
-  <td class=text3 align=left>2020-11-03 14:30</td>
-  <td class=text3 align=left>2020-11-03 17:05</td>
-  <td class=text3 align=center><b><a href="/idc/visit.php?submit=1&getid=101549" OnMouseOver="window.status='Display visit_info HKT(Engineering)'; return true" OnMouseOut="window.status='Done'; return true">Edit</a></b>&nbsp;/&nbsp;<a href="/idc/visit.php?show=1&showid=101549" OnMouseOver="window.status='Display visit_info HKT(Engineering)'; return true" OnMouseOut="window.status='Done'; return true"><b>View</b></a></td>
-</tr>
+ 
+<body>
+  <section><center>
+     
+     
+    
+      
+    <table border="1" cellpadding="5" cellspacing="5">
+      <tr align=center><td class=text4 colspan=9><b>Visit Information</b></td></tr>
+    <tr>
+          <td width=4% align=center><b>Place</b></td>
+          <td width=4% align=center><b>Company</b></td>
+          <td width=4% align=center><b>Name</b></td>
+          <td width=4% align=center><b>HKID</b></td>
+          <td width=4% align=center><b>Card</b></td>
+          <td width=4% align=center><b>Tools</b></td>
+          <td width=4% align=center><b>Time in</b></td>
+          <td width=4% align=center><b>Time out</b></td>
+    </tr>
+    {% for row in result %}
+    <tr>
+    {% for d in row %}
+    <td width=4% align=center>{{d}}</td>
+    {% endfor %}
+    </tr>
+    {% endfor %}
+    </table>
 
 </table>
-
-
-
-
-
 </center>
+</section>
 </body>
 </html>
 

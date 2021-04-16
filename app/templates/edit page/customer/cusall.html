@@ -1,32 +1,12 @@
 {% extends "index_base.html" %}
 {% block content %}
-<?php
-
-$user = 'root'; 
-$password = '123';
-
-$database = 'fyp';
-
-$mysqli = new mysqli($user, $password, $database);
-
-if ($mysqli->connect_error) { 
-    die('Connect Error (' .  
-    $mysqli->connect_errno . ') '.  
-    $mysqli->connect_error); 
-} 
-
-$sql = "SELECT * FROM customer_info"; 
-$result = $mysqli->query($sql); 
-$mysqli->close();  
-
-?>
 
 <html>
  
 <body>
   <section><center>
-    
-    <tr>
+     
+     <tr>
       <td align=center valign="center"><table border=0 cellspacing=1 cellpadding=0><tr>
           <td class=button1><a href="cusadd"> &nbsp;  Add Contact &nbsp;</a></td>
         <td width=10>&nbsp;</td>
@@ -36,38 +16,25 @@ $mysqli->close();
         </tr></table>
       </td>
     </tr>
+    <p></p><p></p>
     
-    
-    <br>
-        <center>
-        <table border=1 cellspacing=0 cellpadding=4 width=95%>
-        <tr align=center><td class=text4 colspan=9><b>Customer Information</b></td></tr>
-        <tr align=left>
-          <td width=20%><b>company</b></td>
-          <td width=10%><b>Name</b></td>
-          <td width=10%><b>HKID</b></td>
-          <td width=10%><b>Phone</b></td>
-          <td width=10% align=center><b>Edit/View</b></td>
-        </tr>
-        
-    <?php
-      while($rows=$result->fetch_assoc()) 
-      { 
-    ?> 
-          
-    
-    
-        <tr>
-          <td width=20%><?php echo $rows['company']; ?></td>
-          <td width=10%><?php echo $rows['name']; ?></td>
-          <td width=10%><?php echo $rows['hkid']; ?></td>
-          <td width=10%><?php echo $rows['phone']; ?></td>
-          <td width=10% align=center><b>Edit/View</b></td>
-        </tr>
-    <?php 
-        } 
-      ?>
-    </table>      
+      
+    <table border="1" cellpadding="5" cellspacing="5">
+      <tr align=center><td class=text4 colspan=9><b>Customer Information</b></td></tr>
+    <tr>
+          <td width=4% align=center><b>company</b></td>
+          <td width=4% align=center><b>Name</b></td>
+          <td width=4% align=center><b>HKID</b></td>
+          <td width=4% align=center><b>Phone</b></td>
+    </tr>
+    {% for row in result %}
+    <tr>
+    {% for d in row %}
+    <td width=4% align=center>{{d}}</td>
+    {% endfor %}
+    </tr>
+    {% endfor %}
+    </table>
 
 </table>
 </center>
